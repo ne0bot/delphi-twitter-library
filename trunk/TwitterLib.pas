@@ -1,4 +1,4 @@
-﻿{
+ {
   You can contact me at: http://eden.fm
 
   License Version: LGPL v3
@@ -18,8 +18,6 @@
   of my code isn't modified.
 
   TwitterLib for Delphi v0.5. Developed by http://eden.fm
-
-  Usage: see usage.pas for details.
 
   3rd party:
 
@@ -794,7 +792,7 @@ begin
           if ResultStrings.Count = 0 then begin
             HTTPClient.RcvdStream.Position := 0;
             try
-              ResultStrings.LoadFromStream(HTTPClient.RcvdStream, TEncoding.UTF8);
+              ResultStrings.LoadFromStream(HTTPClient.RcvdStream, TEncoding.default);
             finally
             end;
             if ResultStrings.Count > 0 then utf8LoadingResult := 1;
@@ -848,7 +846,7 @@ begin
           if ResultStrings.Count = 0 then begin
             SSLHTTPClient.RcvdStream.Position := 0;
             try
-              ResultStrings.LoadFromStream(SSLHTTPClient.RcvdStream, TEncoding.UTF8);
+              ResultStrings.LoadFromStream(SSLHTTPClient.RcvdStream, TEncoding.default);
             finally
             end;
             if ResultStrings.Count > 0 then utf8LoadingResult := 1;
